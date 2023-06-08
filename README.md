@@ -275,3 +275,21 @@ To create a hook run
 ```
 npx husky add .husky/pre-commit "yarn lint"
 ```
+
+The above ensures that we are not allowed to push to the remote repository unless our code can successfully build. That seems like a pretty reasonable condition doesn't it? Feel free to test it by committing this change and trying to push.
+
+---
+
+Lastly we are going to add one more tool. We have been following a standard convention for all our commit messages so far, let's ensure that everyone on the team is following them as well (including ourselves!). We can add a linter for our commit messages:
+
+```
+yarn add -D @commitlint/config-conventional @commitlint/cli
+```
+
+To configure it we will be using a set of standard defaults, but I like to include that list explicitly in a `commitlint.config.js` file since I sometimes forget what prefixes are available:
+
+`commitlint.config.js`
+
+```
+
+```
