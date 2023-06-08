@@ -2,7 +2,7 @@ export interface IHeaderProps {
   name?: string;
 }
 const HeaderComponent = ({ name = '' }: IHeaderProps) => {
-  return <>HeaderComponent</>;
+  return <>HeaderComponent1</>;
 };
 
 export default HeaderComponent;
